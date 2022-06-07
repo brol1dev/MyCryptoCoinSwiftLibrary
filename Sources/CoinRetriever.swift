@@ -8,7 +8,11 @@ public struct CoinRetriever {
     }
     
     public func latestPrice(coin: String) -> String {
-        let headers: HTTPHeaders = ["X-CMC_PRO_API_KEY": apiKey]
+        let headers: HTTPHeaders = [
+            "X-CMC_PRO_API_KEY": apiKey,
+            "Accept": "application/json",
+            "Accept-Encoding": "deflate, gzip"
+        ]
         let parameters: Parameters = ["symbol": "BTC"]
 //        https://pro-api.coinmarketcap.com
         AF.request("https://sandbox-api.coinmarketcap.com/v2/cryptocurrency/quotes/latest", parameters: parameters, headers: headers).response { response in
