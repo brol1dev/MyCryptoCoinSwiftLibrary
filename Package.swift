@@ -27,8 +27,5 @@ let package = Package(
             name: "MyCryptoCoinSwiftLibrary",
             dependencies: ["Alamofire"],
             path: "Sources"),
-        .testTarget(
-            name: "MyCryptoCoinSwiftLibrary Tests",
-            dependencies: ["MyCryptoCoinSwiftLibrary"]),
     ]
 )
