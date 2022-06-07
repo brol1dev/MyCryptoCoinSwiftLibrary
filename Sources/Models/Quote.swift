@@ -1,4 +1,4 @@
 
-struct Quote: Decodable {
+public struct Quote: Decodable {
     let price: Double
 }
