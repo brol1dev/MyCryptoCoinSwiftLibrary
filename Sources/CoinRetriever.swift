@@ -17,7 +17,7 @@ public struct CoinRetriever {
         debugPrint(parameters)
 //        https://pro-api.coinmarketcap.com
 //        sandbox-api.coinmarketcap.com
-        AF.request("https://pro-api.coinmarketcap.com/v2/cryptocurrency/quotes/latest", parameters: parameters, headers: headers).responseDecodable(of: Coins.self) { response in
+        AF.request("https://sandbox-api.coinmarketcap.com/v2/cryptocurrency/quotes/latest", parameters: parameters, headers: headers).responseDecodable(of: Coins.self) { response in
             debugPrint(response)
             guard let coins = response.value else { return }
             debugPrint("after: \(coins)")
