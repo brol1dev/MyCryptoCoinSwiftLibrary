@@ -1,8 +1,4 @@
-//
-//  File.swift
-//  
-//
-//  Created by Eric Vargas on 6/7/22.
-//
 
-import Foundation
+struct Coins: Decodable {
+    let data: [String: [Coin]]
+}
