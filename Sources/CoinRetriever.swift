@@ -15,7 +15,8 @@ public struct CoinRetriever {
         ]
         let parameters: Parameters = ["symbol": "BTC"]
 //        https://pro-api.coinmarketcap.com
-        AF.request("https://sandbox-api.coinmarketcap.com/v2/cryptocurrency/quotes/latest", parameters: parameters, headers: headers).response { response in
+//        sandbox-api.coinmarketcap.com
+        AF.request("https://pro-api.coinmarketcap.com/v2/cryptocurrency/quotes/latest", parameters: parameters, headers: headers).response { response in
             debugPrint(response)
         }
         return "10"
