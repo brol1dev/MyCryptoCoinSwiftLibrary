@@ -1,6 +1,5 @@
 import Alamofire
 
-
 public struct CoinRetriever {
     private var apiKey: String;
     
@@ -9,9 +8,10 @@ public struct CoinRetriever {
     }
     
     public func latestPrice(coin: String) -> String {
-        let headers: HTTPHeaders = ["X-CMC_PRO_API_KEY": "b54bcf4d-1bca-4e8e-9a24-22ff2c3d462c"]
+        let headers: HTTPHeaders = ["X-CMC_PRO_API_KEY": apiKey]
+        let parameters: Parameters = ["symbol": "BTC"]
 //        https://pro-api.coinmarketcap.com
-        AF.request("https://sandbox-api.coinmarketcap.com/v1/cryptocurrency/listings/latest", headers: headers).response { response in
+        AF.request("https://sandbox-api.coinmarketcap.com/v2/cryptocurrency/quotes/latest", parameters: parameters, headers: headers).response { response in
             debugPrint(response)
         }
         return "10"
