@@ -1,6 +1,6 @@
 
 public struct Coin: Decodable {
-    let name: String
-    let symbol: String
-    let quote: [String: Quote]
+    public let name: String
+    public let symbol: String
+    public let quote: [String: Quote]
 }
