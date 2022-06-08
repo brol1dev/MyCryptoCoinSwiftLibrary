@@ -14,10 +14,7 @@ public struct CoinRetriever {
             "Accept-Encoding": "deflate, gzip"
         ]
         let parameters: Parameters = ["symbol": coins.joined(separator: ",")]
-        debugPrint(parameters)
-//        pro-api.coinmarketcap.com
-//        sandbox-api.coinmarketcap.com
-        AF.request("https://sandbox-api.coinmarketcap.com/v2/cryptocurrency/quotes/latest", parameters: parameters, headers: headers).responseDecodable(of: Coins.self) { response in
+        AF.request("https://pro-api.coinmarketcap.com/v2/cryptocurrency/quotes/latest", parameters: parameters, headers: headers).responseDecodable(of: Coins.self) { response in
             guard let coins = response.value else {
                 completionHandler(.failure(response.error!))
                 return
