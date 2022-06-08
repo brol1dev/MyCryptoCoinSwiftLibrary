@@ -2,10 +2,7 @@ import SwiftUI
 import MyCryptoCoinSwiftLibrary
 
 struct ContentView: View {
-    // prod
-//    let coinRetriever = CoinRetriever(apiKey: "0e3cd0cc-0e09-4693-9675-15a9d079ae68")
-    // sandbox
-    let coinRetriever = CoinRetriever(apiKey: "b54bcf4d-1bca-4e8e-9a24-22ff2c3d462c")
+    let coinRetriever = CoinRetriever(apiKey: "YOUR API KEY")
     @State var coins = [Coin]()
     
     var body: some View {
