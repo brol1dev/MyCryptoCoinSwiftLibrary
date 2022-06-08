@@ -1,0 +1,23 @@
+{
+  "pins" : [
+    {
+      "identity" : "alamofire",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Alamofire/Alamofire.git",
+      "state" : {
+        "revision" : "354dda32d89fc8cd4f5c46487f64957d355f53d8",
+        "version" : "5.6.1"
+      }
+    },
+    {
+      "identity" : "mycryptocoinswiftlibrary",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/rcvrgs/MyCryptoCoinSwiftLibrary",
+      "state" : {
+        "branch" : "main",
+        "revision" : "ae494eb75fa6b43aa2707af1c0670ae544e2957f"
+      }
+    }
+  ],
+  "version" : 2
+}
